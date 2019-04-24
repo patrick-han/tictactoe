@@ -1,2 +1,3 @@
 main
-tictactoe.sublime-project
+*.sublime-workspace
+*.sublime-project
