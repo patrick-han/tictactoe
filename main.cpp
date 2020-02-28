@@ -14,22 +14,14 @@ bool canMark = true;
 int numMoves = 0;
 int playerTurn = 1;
 int input;
-char board[] = {'1', '2', '3', 
-				'4', '5', '6', 
-				'7', '8', '9'};
+char board[] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
+int checkBoard[] = {0, 0, 0, 0, 0, 0, 0, 0, 0,};
 
-							   // d1
-int checkBoard[] = {0, 0, 0,   // r1
-					0, 0, 0,   // r2
-					0, 0, 0,}; // r3
-				  //c1 c2 c3 d2
-
+// Rows, cols, diags
 int r1, r2, r3;
 int c1, c2, c3;
 int d1, d2;
-
-
 
 
 int main() {
@@ -50,10 +42,7 @@ int main() {
 
 		numMoves++;
 
-		
-
 		renderBoard(); // Show current board state
-
 
 		// Update which player's turn it is
 		if (playerTurn == 1) {
@@ -63,9 +52,7 @@ int main() {
 			playerTurn--;
 		}
 
-
 		playerWon = checkGameStatus(); // Change game state if stalemate/win, set as true even in the case of stalemate
-
 
 	}
 
